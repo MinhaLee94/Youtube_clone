@@ -36,8 +36,12 @@ const routes = {
     videoDetail: id => {
         return id ? `/videos/${id}` : VIDEO_DETAIL;
     },
-    editVideo: EDIT_VIDEO,
-    deleteVideo: DELETE_VIDEO
+    editVideo: id => {
+        return id ? `/videos/${id}/edit` : EDIT_VIDEO;
+    },
+    deleteVideo: id => {
+        return id ? `/videos/${id}/delete` : DELETE_VIDEO;
+    }
 };
 
 export default routes;
